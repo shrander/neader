@@ -1,7 +1,3 @@
-.signup-button {
-    float: right;
-}
-
 .zocial {
     margin: 8px 4px;
     font-size: 13px;
@@ -79,7 +75,7 @@ a.zocial {
 	border: none;
 }
 
-.zocial {
+.zocial, .signup-button {
 	background-image: -moz-linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.05) 49%, rgba(0,0,0,.05) 51%, rgba(0,0,0,.1));
 	background-image: -ms-linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.05) 49%, rgba(0,0,0,.05) 51%, rgba(0,0,0,.1));
 	background-image: -o-linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.05) 49%, rgba(0,0,0,.05) 51%, rgba(0,0,0,.1));
@@ -88,7 +84,7 @@ a.zocial {
 	background-image: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.05) 49%, rgba(0,0,0,.05) 51%, rgba(0,0,0,.1));
 }
 
-.zocial:hover, .zocial:focus {
+.zocial:hover, .zocial:focus, .signup-button:hover, .signup-button:focus {
 	background-image: -moz-linear-gradient(rgba(255,255,255,.15) 49%, rgba(0,0,0,.1) 51%, rgba(0,0,0,.15));
 	background-image: -ms-linear-gradient(rgba(255,255,255,.15) 49%, rgba(0,0,0,.1) 51%, rgba(0,0,0,.15));
 	background-image: -o-linear-gradient(rgba(255,255,255,.15) 49%, rgba(0,0,0,.1) 51%, rgba(0,0,0,.15));
@@ -97,7 +93,7 @@ a.zocial {
 	background-image: linear-gradient(rgba(255,255,255,.15) 49%, rgba(0,0,0,.1) 51%, rgba(0,0,0,.15));
 }
 
-.zocial:active {
+.zocial:active, .signup-button:active{
 	background-image: -moz-linear-gradient(bottom, rgba(255,255,255,.1), rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,.1));
 	background-image: -ms-linear-gradient(bottom, rgba(255,255,255,.1), rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,.1));
 	background-image: -o-linear-gradient(bottom, rgba(255,255,255,.1), rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,.1));
@@ -110,3 +106,9 @@ a.zocial {
 .zocial.google:before {content: "g";}
 .zocial.facebook {background-color: #4863ae;}
 .zocial.google {background-color: #4e6cf7;}
+.signup-button {
+    float: right;
+    background-color: #FF4500;
+}
+
+
