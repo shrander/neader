@@ -1,0 +1,31 @@
+{% load staticfiles %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="description" content="A feed aggregator to replace ">
+        <link rel="icon" type="image/ico" href="favicon.ico">
+        <link type="text/css" rel="stylesheet" href="{% static "nead.css" %}">
+        <script type="text/javascript" async="" src="./login_template_files/ga.js"></script>
+        <title>Neader - Feed aggregator</title>
+    </head>
+    <body>
+        {{state}}
+        <form action='/' method="post">{% csrf_token %}
+            {% if next %}
+            <input type = 'hidden' name='next' value='{{ next }}' />
+            {% endif %}
+            username:
+            <input type='text' name='username' value='{{ username }}' /><br/>
+            password:
+            <input type='password' name='password' value='{{ password }}' /><br/>
+            <input type='submit' value='Log in' />
+        </form>
+        <div class="zocial-div">
+            <a href="#" class="zocial facebook">Sign in with Facebook</a>
+            <a href="#" class="zocial google">Sign in with Google</a>
+        </div>
+    </body>
+</html>

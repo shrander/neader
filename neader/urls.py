@@ -8,8 +8,9 @@ urlpatterns = patterns('',
     # Examples:
     #url(r'^$', 'neader.views.home', name='home'),
     #url(r'^trends/', include('neader.foo.urls')),
-    url(r'', include('social_auth.urls')),
-    
+    url(r'^$', 'auth.views.login_user'),
+    url(r'^feeds/', 'feeds'),
+    url(r'^feeds/[feed name]/', 'subcription'),
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
