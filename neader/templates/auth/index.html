@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
@@ -11,6 +10,14 @@
         <title>Neader - Feed aggregator</title>
     </head>
     <body>
+        <div>
+            <img src=""/>
+        </div>
+        <div>New to Neader? 
+            <div> 
+                <a href="registration/" class="button registration">Create an Account</a>
+            </div>
+        </div>
         {{state}}
         <form action='/' method="post">{% csrf_token %}
             {% if next %}
