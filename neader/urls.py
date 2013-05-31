@@ -12,7 +12,10 @@ urlpatterns = patterns('',
     url(r'^$', 'auth.views.login_user'),
     url(r'^logout/', 'auth.views.logout'),
     url(r'^feeds/', include('feeds.urls')),
-    #url(r'^feeds/(?P<feed_id>/$', include('subscription')),
+    #url(r'^feeds/(?P<feed_id>/$', ),
+    url(r'^trends/', include('trends.urls'),
+    url(r'^registration/', include('registration.urls'),
+    url(r'^profile/', include('profile.urls'),
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
