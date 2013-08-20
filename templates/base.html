@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/nead.css" />
+    <title>{% block title %}Neader - Feed aggregator{% endblock %}</title>
+</head>
+
+<body>
+    <div id="banner">
+        {% block banner %}
+        <div id="banner img">
+            <img src="/static/nead.png"/>
+        </div>
+        <div id="resistration">
+            New to Neader?
+            <a href="registration/" class="button registration">Create an Account</a>
+        </div>
+        {% endblock %}
+    </div>
+    <div id="side_nav">
+        {% block side_nav %}
+        <div class="Subscribe-button">
+            <a href="#" class="subscribe">Subscribe</a>
+        </div>
+        <ul>
+            <li><a href="/feeds/">Home</a></li>
+            <li><a href="/starred/">Starred</a></li>
+        
+            {% for each in subscriptions %}
+                <li><a href="/{{ each.name }}"<li>
+            {% endfor %} 
+        {% endblock %}
+    </div>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
